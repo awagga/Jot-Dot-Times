@@ -5,9 +5,7 @@
 </head>
 <style>
 
-  :root {
-    --checkmark : 28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%;
-  }
+  :root { --checkmark : 28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%; }
 
   *,*:before,*:after { box-sizing: border-box; }
   body { font-size: 62.5%; font-family: sans-serif; }
@@ -25,7 +23,6 @@
   a { text-decoration: none ;}
 
   h1 { font-size: 5.4em; }
-
   h2 { font-size: 4.4em; }
   h3 { font-size: 3.4em; }
   h4 { font-size: 2.4em; }
@@ -68,12 +65,20 @@
     transform: scale(1); 
   }
 
-  #Python:not(:checked) ~ main article.Python,
-  #JSON:not(:checked) ~ main article.JSON,
-  #LeetCode:not(:checked) ~ main article.LeetCode,
-  #Notation:not(:checked) ~ main article.Notation,
-  #Tacit:not(:checked) ~ main article.Tacit { 
-    display: none; 
+  main article.Python,
+  main article.JSON,
+  main article.LeetCode,
+  main article.Notation,
+  main article.Tacit {
+    display: none;
+  }
+
+  #Python:checked ~ main article.Python,
+  #JSON:checked ~ main article.JSON,
+  #LeetCode:checked ~ main article.LeetCode,
+  #Notation:checked ~ main article.Notation,
+  #Tacit:checked ~ main article.Tacit { 
+    display: inherit;
   }
 
   @media only screen and (max-width: 1200px) { body { font-size: 50%; } }
