@@ -52,28 +52,36 @@
   #Python:checked ~ section label[for="Python"] mask,
   #LeetCode:checked ~ section label[for="LeetCode"] mask,
   #Notation:checked ~ section label[for="Notation"] mask,
-  #Tacit:checked ~ section label[for="Tacit"] mask   { 
+  #Tacit:checked ~ section label[for="Tacit"] mask,
+  #Machine-Learning:checked ~ section label[for="Machine-Learning"] mask,
+  #Mathematics:checked ~ section label[for="Mathematics"] mask { 
     background-color: #0060df; border-color: #0060df; 
   }
 
   #Python:checked ~ section label[for="Python"] mask::before,
   #LeetCode:checked ~ section label[for="LeetCode"] mask::before,
   #Notation:checked ~ section label[for="Notation"] mask::before,
-  #Tacit:checked ~ section label[for="Tacit"] mask::before {
+  #Tacit:checked ~ section label[for="Tacit"] mask::before,
+  #Machine-Learning:checked ~ section label[for="Machine-Learning"] mask::before,
+  #Mathematics:checked ~ section label[for="Mathematics"] mask::before {
     transform: scale(1); 
   }
 
   main article.Python,
   main article.LeetCode,
   main article.Notation,
-  main article.Tacit {
+  main article.Tacit,
+  main article.Machine-Learning,
+  main article.Mathematics {
     display: none;
   }
 
   #Python:checked ~ main article.Python,
   #LeetCode:checked ~ main article.LeetCode,
   #Notation:checked ~ main article.Notation,
-  #Tacit:checked ~ main article.Tacit { 
+  #Tacit:checked ~ main article.Tacit,
+  #Machine-Learning:checked ~ main article.Machine-Learning,
+  #Mathematics:checked ~ main article.Mathematics { 
     display: inherit;
   }
 
@@ -88,6 +96,8 @@
   <input style="display:none" type="checkbox" id="LeetCode" checked="">
   <input style="display:none" type="checkbox" id="Notation" checked="">
   <input style="display:none" type="checkbox" id="Tacit" checked="">
+  <input style="display:none" type="checkbox" id="Machine-Learning" checked="">
+  <input style="display:none" type="checkbox" id="Mathematics" checked="">
 
   <section>
     <b>Filters:</b>
@@ -95,6 +105,8 @@
     <label for="LeetCode"><mask></mask></label>
     <label for="Notation"><mask></mask></label>
     <label for="Tacit"><mask></mask></label>
+    <label for="Machine-Learning"><mask></mask></label>
+    <label for="Mathematics"><mask></mask></label>
   </section>
   <main>
     <nav style="font-family: 'Times New Roman', Times, serif;">
