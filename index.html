@@ -55,21 +55,24 @@
   #Python:checked ~ section label[for="Python"] mask,
   #JSON:checked ~ section label[for="JSON"] mask,
   #LeetCode:checked ~ section label[for="LeetCode"] mask,
-  #Notation:checked ~ section label[for="Notation"] mask  { 
+  #Notation:checked ~ section label[for="Notation"] mask,
+  #Tacit:checked ~ section label[for="Tacit"] mask   { 
     background-color: #0060df; border-color: #0060df; 
   }
 
   #Python:checked ~ section label[for="Python"] mask::before,
   #JSON:checked ~ section label[for="JSON"] mask::before,
   #LeetCode:checked ~ section label[for="LeetCode"] mask::before,
-  #Notation:checked ~ section label[for="Notation"] mask::before { 
+  #Notation:checked ~ section label[for="Notation"] mask::before,
+  #Tacit:checked ~ section label[for="Tacit"] mask::before {
     transform: scale(1); 
   }
 
   #Python:not(:checked) ~ main article.Python,
   #JSON:not(:checked) ~ main article.JSON,
   #LeetCode:not(:checked) ~ main article.LeetCode,
-  #Notation:not(:checked) ~ main article.Notation { 
+  #Notation:not(:checked) ~ main article.Notation,
+  #Tacit:not(:checked) ~ main article.Tacit { 
     display: none; 
   }
 
@@ -84,6 +87,7 @@
   <input style="display:none" type="checkbox" id="JSON" checked="">
   <input style="display:none" type="checkbox" id="LeetCode" checked="">
   <input style="display:none" type="checkbox" id="Notation" checked="">
+  <input style="display:none" type="checkbox" id="Tacit" checked="">
 
   <section>
     <b>Filters:</b>
@@ -91,16 +95,36 @@
     <label for="JSON"><mask></mask></label>
     <label for="LeetCode"><mask></mask></label>
     <label for="Notation"><mask></mask></label>
+    <label for="Tacit"><mask></mask></label>
   </section>
   <main>
     <nav style="font-family: 'Times New Roman', Times, serif;">
       <h1><span style="display:inline-block;line-height:100%;font-size: 0.35em;">THE<br><i>APL</i></span>Jot Dot Times</h1></nav>
+      
+    <article>
+      <h4><a href="http://blog.vmchale.com/article/apl-different"
+        >APL Is Truly Different</a></h4>
+      <author><b>August 26th 2022, Vanessa McHale</b></author>
+    </article>      
+    
     <article class="JSON | Python">
       <h4><a href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
         >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and JSON</a></h4>
       <author><b>August 24th 2022, Rodrigo Girão Serrão</b></author>
     </article>
 
+    <article>
+      <h4><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
+        >Knapsack II</a></h4>
+      <author><b>August 6th 2022, Felix Flath</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
+        >Knapsack</a></h4>
+      <author><b>August 6th 2022, Felix Flath</b></author>
+    </article>
+    
     <article class="Notation">
       <h4><a href="https://www.toolofthought.com/posts/on-control-structures"
         >On Control Structures</a></h4>
@@ -117,6 +141,12 @@
       <h4><a href="https://www.toolofthought.com/posts/leetcode-601"
         >LeetCode 601: Human Traffic of Stadium</a></h4>
       <author><b>July 9th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article class="Tacit">
+      <h4><a href="https://www.toolofthought.com/posts/trains"
+        >Trains</a></h4>
+      <author><b>July 8th 2022, Paul Mansour</b></author>
     </article>
 
     <article class="Python">
