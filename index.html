@@ -52,6 +52,8 @@
     header {
       border-right: 2px dashed #eee;
       height: 100%;
+      top: 0;
+      position: sticky;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -86,7 +88,8 @@
 
     #posts.no-Python article.Python,
     #posts.no-JSON article.JSON,
-    #posts.no-LeetCode article.LeetCode {
+    #posts.no-LeetCode article.LeetCode,
+    #posts.no-Notation article.Notation {
       display: none;
     }
 
@@ -138,6 +141,10 @@
               <label for="LeetCode"><em>LeetCode</em></label
               ><input id="LeetCode" checked type="checkbox" data-type="LeetCode" onclick="filter(this);"/>
             </div>
+            <div>
+              <label for="Notation"><em>Notation</em></label
+              ><input id="Notation" checked type="checkbox" data-type="Notation" onclick="filter(this);"/>
+            </div>
         </header>
       <section id="posts">
         <nav>
@@ -163,7 +170,7 @@
           <span class="tag">JSON</span><span class="tag"> | Python</span>
         </article>
         <!-- -->
-        <article>
+        <article class="Notation">
           <a
             class="title"
             href="https://www.toolofthought.com/posts/on-control-structures"
@@ -173,6 +180,22 @@
             <span class="date">Posted on <b>August 1, 2022</b></span>
             <span class="author">by <b>Paul Mansour</b></span>
           </div>
+          <br />
+          <span class="tag">Notation</span>
+        </article>
+        <!-- -->
+        <article class="Notation">
+          <a
+            class="title"
+            href="https://blog.dhsdevelopments.com/control-structures-in-kap"
+            >Control structures in KAP</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>July 23, 2022</b></span>
+            <span class="author">by <b>Elias Mårtenson</b></span>
+          </div>
+          <br />
+          <span class="tag">Notation</span>
         </article>
         <!-- -->
         <article class="LeetCode">
@@ -187,6 +210,34 @@
           </div>
           <br />
           <span class="tag">LeetCode</span>
+        </article>
+        <!-- -->
+        <article class="Python">
+          <a
+            class="title"
+            href="https://www.dyalog.com/blog/2022/05/maintaining-pynapl-part-1-the-beginning"
+            >Maintaining Py’n’APL Part 1: The Beginning</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>May 9, 2022</b></span>
+            <span class="author">by <b>Rodrigo Girão Serrão</b></span>
+          </div>
+          <br />
+          <span class="tag">Python</span>
+        </article>
+        <!-- -->
+        <article class="Notation">
+          <a
+            class="title"
+            href="https://outerproduct.net/2022-03-07_death-to-%E2%97%8B.html"
+            >Fixing APL’s Trigonometric Notation</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>March 7, 2022</b></span>
+            <span class="author">by <b>Moonchild</b></span>
+          </div>
+          <br />
+          <span class="tag">Notation</span>
         </article>
       </section>
       <header>
