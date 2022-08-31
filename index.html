@@ -16,7 +16,7 @@
       font-family: Atkinson Hyperlegible;
     }
     html {
-      border: 1em solid #eee;
+      border: 1rem solid #eee;
     }
     body,
     html {
@@ -29,38 +29,36 @@
       text-align: center;
     }
 
-    span {
-      font-size: 1rem;
-    }
-
     article {
       border-bottom: 1px solid #bcbcbc;
-      padding: 3em;
+    }
+
+    span {
+        font-size: 1.5em;
     }
 
     .title {
-      font-size: 1.5rem;
-      line-height: 1.5em;
+      font-size: 2.5em;
+      line-height: 2rem;
       text-decoration: none;
     }
 
-    .tags {
+    .tag {
       color: #666;
-      font-size: 0.8rem;
-      float: left;
+      font-size: 1.5em;
     }
 
     header {
       border-right: 2px dashed #eee;
       height: 100%;
-      width: 25%;
       display: flex;
       flex-direction: column;
-      padding: 3em;
+      flex-grow: 1;
+      flex-basis: 0;
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 5.5em;
       font-family: inital;
     }
 
@@ -75,11 +73,10 @@
 
     header > * {
       margin-left: auto;
-      font-size: 1rem;
+      font-size: 2em;
     }
 
     main {
-      position: relative;
       display: flex;
       height: 100%;
       overflow-y: scroll;
@@ -93,15 +90,35 @@
     }
 
     #posts {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      max-width: 40rem;
+      max-width: 70em;
+    }
+
+    #posts,header,article{
+        padding: 1.5rem;
     }
 
     article:last-child {
       border: none;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        body {
+            font-size: 50%;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        header {
+            display: none;
+        }
+
+        #posts {
+            text-align: center;
+        }
+
+        main {
+            justify-content: center;
+        }
     }
   </style>
   <body>
@@ -124,7 +141,7 @@
       <section id="posts">
         <nav>
           <h1>
-            <span style="display: inline-block"
+            <span style="display: inline-block; font-size: 0.3em"
               ><em>THE<br />APL</em></span
             >Jot Dot Times
           </h1>
@@ -142,7 +159,7 @@
             <span class="author">by <b>Rodrigo Girão Serrão</b></span>
           </div>
           <br />
-          <div class="tags"><span>JSON</span> | <span>Python</span></div>
+          <span class="tag">JSON</span><span class="tag"> | Python</span>
         </article>
         <!-- -->
         <article>
@@ -168,9 +185,12 @@
             <span class="author">by <b>Paul Mansour</b></span>
           </div>
           <br />
-          <div class="tags"><span>LeetCode</span></div>
+          <span class="tag">LeetCode</span>
         </article>
       </section>
+      <header>
+        <!-- -->
+      </header>
     </main>
   </body>
 
