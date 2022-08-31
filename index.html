@@ -50,7 +50,6 @@
   mask::before{ content: ""; width: .8rem; height: .8rem; clip-path: polygon(var(--checkmark)); transform: scale(0); background-color: white; }
 
   #Python:checked ~ section label[for="Python"] mask,
-  #JSON:checked ~ section label[for="JSON"] mask,
   #LeetCode:checked ~ section label[for="LeetCode"] mask,
   #Notation:checked ~ section label[for="Notation"] mask,
   #Tacit:checked ~ section label[for="Tacit"] mask   { 
@@ -58,7 +57,6 @@
   }
 
   #Python:checked ~ section label[for="Python"] mask::before,
-  #JSON:checked ~ section label[for="JSON"] mask::before,
   #LeetCode:checked ~ section label[for="LeetCode"] mask::before,
   #Notation:checked ~ section label[for="Notation"] mask::before,
   #Tacit:checked ~ section label[for="Tacit"] mask::before {
@@ -66,7 +64,6 @@
   }
 
   main article.Python,
-  main article.JSON,
   main article.LeetCode,
   main article.Notation,
   main article.Tacit {
@@ -74,7 +71,6 @@
   }
 
   #Python:checked ~ main article.Python,
-  #JSON:checked ~ main article.JSON,
   #LeetCode:checked ~ main article.LeetCode,
   #Notation:checked ~ main article.Notation,
   #Tacit:checked ~ main article.Tacit { 
@@ -89,7 +85,6 @@
 <body>
 <div class="container">
   <input style="display:none" type="checkbox" id="Python" checked="">
-  <input style="display:none" type="checkbox" id="JSON" checked="">
   <input style="display:none" type="checkbox" id="LeetCode" checked="">
   <input style="display:none" type="checkbox" id="Notation" checked="">
   <input style="display:none" type="checkbox" id="Tacit" checked="">
@@ -97,7 +92,6 @@
   <section>
     <b>Filters:</b>
     <label for="Python"><mask></mask></label>
-    <label for="JSON"><mask></mask></label>
     <label for="LeetCode"><mask></mask></label>
     <label for="Notation"><mask></mask></label>
     <label for="Tacit"><mask></mask></label>
@@ -112,7 +106,7 @@
       <author><b>August 26th 2022, Vanessa McHale</b></author>
     </article>      
     
-    <article class="JSON | Python">
+    <article class="Python">
       <h4><a href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
         >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and JSON</a></h4>
       <author><b>August 24th 2022, Rodrigo Girão Serrão</b></author>
@@ -154,18 +148,138 @@
       <author><b>July 8th 2022, Paul Mansour</b></author>
     </article>
 
+    <article class="LeetCode">
+      <h4><a href="https://www.toolofthought.com/posts/leetcode-569"
+        >LeetCode 569: Median Employee Salary</a></h4>
+      <author><b>July 7th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article class="LeetCode">
+      <h4><a href="https://www.toolofthought.com/posts/leetcode-571"
+        >LeetCode 571: Find Median Given Frequency of Numbers</a></h4>
+      <author><b>July 6th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article class="LeetCode">
+      <h4><a href="https://www.toolofthought.com/posts/leetcode-571"
+        >LeetCode 262: Trips and Users</a></h4>
+      <author><b>June 26th 2022, Paul Mansour</b></author>
+    </article>
+    
+    <article class="LeetCode">
+      <h4><a href="https://www.toolofthought.com/posts/leetcode-185"
+        >LeetCode 185: Department Top Three Salaries</a></h4>
+      <author><b>July 6th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://www.toolofthought.com/posts/operators-in-a-dsl"
+        >Operators in a DSL</a></h4>
+      <author><b>May 28th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://blog.dhsdevelopments.com/commentary-on-array-cast"
+        >Commentary on Array Cast</a></h4>
+      <author><b>May 18th 2022, Elias Mårtenson</b></author>
+    </article>
+    
     <article class="Python">
       <h4><a href="https://www.dyalog.com/blog/2022/05/maintaining-pynapl-part-1-the-beginning"
         >Maintaining Py’n’APL Part 1: The Beginning</a></h4>
       <author><b>May 9th 2022, Rodrigo Girão Serrão</b></author>
     </article>
+    
+    <article>
+      <h4><a href="https://mathspp.com/blog/solving-wordle-with-apl"
+        >Solving Wordle with APL</a></h4>
+      <author><b>March 28th 2022, Rodrigo Girão Serrão</b></author>
+    </article>
 
+    <article>
+      <h4><a href="https://mathspp.com/blog/why-apl-is-a-language-worth-knowing"
+        >Why APL is a language worth knowing</a></h4>
+      <author><b>March 24th 2022, Rodrigo Girão Serrão</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://blog.dhsdevelopments.com/lazy-evaluation-helping-implementation-of-transform-by-mask-in-kap"
+        >Lazy evaluation helping implementation of transform by mask in KAP</a></h4>
+      <author><b>March 13th 2022, Elias Mårtenson</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://blog.dhsdevelopments.com/an-example-of-lazy-evaluation-in-kap"
+        >An example of lazy evaluation in KAP</a></h4>
+      <author><b>March 12th 2022, Elias Mårtenson</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://www.toolofthought.com/posts/session-configuration"
+        >Session Configuration</a></h4>
+      <author><b>March 6th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://www.toolofthought.com/posts/a-new-workspace-file-format"
+        >A New Workspace File Format</a></h4>
+      <author><b>February 26th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article class="Machine-Learning | Mathematics">
+      <h4><a href="https://mathspp.com/blog/til/034"
+        >TIL #034 – multi-channel transposed convolution</a></h4>
+      <author><b>February 23rd 2022, Rodrigo Girão Serrão</b></author>
+    </article>
+
+    <article class="Machine-Learning | Mathematics">
+      <h4><a href="https://mathspp.com/blog/til/034"
+        >TIL #033 – transposed convolution</a></h4>
+      <author><b>February 22nd 2022, Rodrigo Girão Serrão</b></author>
+    </article>
+    
     <article class="Notation">
       <h4><a href="https://outerproduct.net/2022-03-07_death-to-%E2%97%8B.html"
         >Fixing APL’s Trigonometric Notation</a></h4>
       <author><b>March 7th 2022, Moonchild</b></author>
     </article>
 
+    <article>
+      <h4><a href="https://www.toolofthought.com/posts/aaronhsuquote"
+        >Aaron Hsu at Function Conf 2022</a></h4>
+      <author><b>January 27th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article>
+      <h4><a href="https://www.toolofthought.com/posts/vfi-with-csv"
+        >A New Workspace File Format</a></h4>
+      <author><b>January 26th 2022, Paul Mansour</b></author>
+    </article>
+
+    <article class="Mathematics">
+      <h4><a href="https://mathspp.com/blog/counting-mosaics-with-apl"
+        >TIL #021 – Spouge's formula</a></h4>
+      <author><b>January 10th 2022, Rodrigo Girão Serrã</b></author>
+    </article>
+
+    <article class="Mathematics">
+      <h4><a href="https://palaiologos.rocks/posts/linalg-apl/"
+        >Implementing the Faddeev-LeVerrier algorithm in APL</a></h4>
+      <author><b>January 10th 2022, Kamila Szewczyk</b></author>
+    </article>
+
+    <article class="Mathematics">
+      <h4><a href="https://palaiologos.rocks/posts/poly-root-apl"
+        >Finding roots of a polynomial - numerical methods in APL</a></h4>
+      <author><b>January 9th 2022, Kamila Szewczyk</b></author>
+    </article>
+
+    <article class="Mathematics">
+      <h4><a href="https://palaiologos.rocks/posts/taylor-apl/"
+        >Implementing Taylor Series in APL</a></h4>
+      <author><b>January 6th 2022, Kamila Szewczyk</b></author>
+    </article>
+    
   </main>
   <section></section>
 </div>
