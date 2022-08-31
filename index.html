@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <title>∘.×</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    @font-face {
+      font-family: "Atkinson Hyperlegible";
+      src: url(Atkinson-Hyperlegible-Regular.otf);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 62.5%;
+      font-family: Atkinson Hyperlegible;
+    }
+    html {
+      border: 1em solid #eee;
+    }
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    nav {
+      text-align: center;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+
+    article {
+      border-bottom: 1px solid #bcbcbc;
+      padding: 3em;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      line-height: 1.5em;
+      text-decoration: none;
+    }
+
+    .tags {
+      color: #666;
+      font-size: 0.8rem;
+      float: left;
+    }
+
+    header {
+      border-right: 2px dashed #eee;
+      height: 100%;
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      padding: 3em;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-family: inital;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+
+    header > * {
+      margin-left: auto;
+      font-size: 1rem;
+    }
+
+    main {
+      position: relative;
+      display: flex;
+      height: 100%;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #posts.no-Python article.Python,
+    #posts.no-JSON article.JSON,
+    #posts.no-LeetCode article.LeetCode {
+      display: none;
+    }
+
+    #posts {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 40rem;
+    }
+
+    article:last-child {
+      border: none;
+    }
+  </style>
+  <body>
+    <main>
+        <header>
+            <b>Filters:</b>
+            <div>
+              <label for="Python"><em>Python</em></label
+              ><input id="Python"checked type="checkbox" data-type="Python" onclick="filter(this);"/>
+            </div>
+            <div>
+              <label for="JSON"><em>JSON</em></label
+              ><input id="JSON" checked type="checkbox" data-type="JSON" onclick="filter(this);"/>
+            </div>
+            <div>
+              <label for="LeetCode"><em>LeetCode</em></label
+              ><input id="LeetCode" checked type="checkbox" data-type="LeetCode" onclick="filter(this);"/>
+            </div>
+        </header>
+      <section id="posts">
+        <nav>
+          <h1>
+            <span style="display: inline-block"
+              ><em>THE<br />APL</em></span
+            >Jot Dot Times
+          </h1>
+        </nav>
+
+        <article class="JSON Python">
+          <a
+            class="title"
+            href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
+            >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and
+            JSON</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>August 24, 2022</b></span>
+            <span class="author">by <b>Rodrigo Girão Serrão</b></span>
+          </div>
+          <br />
+          <div class="tags"><span>JSON</span> | <span>Python</span></div>
+        </article>
+        <!-- -->
+        <article>
+          <a
+            class="title"
+            href="https://www.toolofthought.com/posts/on-control-structures"
+            >On Control Structures</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>August 1, 2022</b></span>
+            <span class="author">by <b>Paul Mansour</b></span>
+          </div>
+        </article>
+        <!-- -->
+        <article class="LeetCode">
+          <a
+            class="title"
+            href="https://www.toolofthought.com/posts/leetcode-601"
+            >LeetCode 601: Human Traffic of Stadium</a
+          >
+          <div class="meta">
+            <span class="date">Posted on <b>July 9, 2022</b></span>
+            <span class="author">by <b>Paul Mansour</b></span>
+          </div>
+          <br />
+          <div class="tags"><span>LeetCode</span></div>
+        </article>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    const posts = document.getElementById("posts");
+    function filter(f) {
+      f.checked == true
+        ? posts.classList.remove("no-" + f.dataset.type)
+           : posts.classList.add("no-" + f.dataset.type);
+    }
+  </script>
+</html>
