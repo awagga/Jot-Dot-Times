@@ -1,48 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Jot Dot Times newsfeed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<style>
+  <style>
 
-  body { line-height: 1.5; text-align: center; width: 45%; margin: 0 auto; overflow-y: scroll; }
-
-  article { padding: 1.5em; text-align: left; }
-  article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
-  article::after{ content: attr(class); color: #666;}
+    body { line-height: 1.5; text-align: center; width: 45%; margin: 0 auto; overflow-y: scroll; }
   
-  a { text-decoration: none; font-size: 1.5em; }
-  article::after,label{ font-variant: all-small-caps; }
-
-  label { cursor: pointer; user-select: none; padding: 0 0.5em; border-bottom: .67ex solid transparent; display: inline-block; transition: .1s; }
-
-  label::before { content: attr(for); }
-  input:checked + label { border-color: #a7d9b6; }
-
-  input,article { display: none; }
-
-  #Challenge:checked    ~ .Challenge,
-  #Pointfree:checked    ~ .Pointfree,
-  #Mathematics:checked  ~ .Mathematics,
-  #Idiom:checked        ~ .Idiom,
-  #Design:checked       ~ .Design,
-  #Commentary:checked   ~ .Commentary,
-  #Announcement:checked ~ .Announcement,
-  #Example:checked      ~ .Example,
-  #Anecdote:checked     ~ .Anecdote {
-      display: inherit;
-    }
-
-  input:checked ~ p { display: none; } 
-  @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
-  @media only screen and (max-width:  992px) { body { text-align: center; } }
-
-</style>
+    article { padding: 1.5em; text-align: left; }
+    article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
+    article::after{ content: attr(class); color: #666;}
+    
+    a { text-decoration: none; font-size: 1.5em; }
+    article::after,label{ font-variant: all-small-caps; }
+  
+    label { cursor: pointer; user-select: none; padding: 0 0.5em; border-bottom: .67ex solid transparent; display: inline-block; transition: .1s; }
+  
+    label::before { content: attr(for); }
+    input:checked + label { border-color: #a7d9b6; }
+  
+    input,article { display: none; }
+  
+    #Challenge:checked    ~ .Challenge,
+    #Pointfree:checked    ~ .Pointfree,
+    #Mathematics:checked  ~ .Mathematics,
+    #Idiom:checked        ~ .Idiom,
+    #Design:checked       ~ .Design,
+    #Commentary:checked   ~ .Commentary,
+    #Announcement:checked ~ .Announcement,
+    #Example:checked      ~ .Example,
+    #Anecdote:checked     ~ .Anecdote {
+        display: inherit;
+      }
+  
+    input:checked ~ p { display: none; } 
+    @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
+    @media only screen and (max-width:  992px) { body { text-align: center; } }
+  
+  </style>
+</head>
 <body>
 
   <nav style="text-align: center; font-family: 'Times New Roman', Times, serif;">
     <h1 style="margin: 0; font-size: 3.5em;"><span style="display:inline-block;line-height:100%;font-size: 0.4em;padding:0.1em">The<br><i>APL</i></span>Jo̊t Dȯt Ti̽mes</h1></nav>
-  </h1></nav>
 
   <input type="checkbox" id="Challenge"     checked=""><label for="Challenge"></label>
   <input type="checkbox" id="Pointfree"     checked=""><label for="Pointfree"></label>
