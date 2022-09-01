@@ -5,7 +5,7 @@
 </head>
 <style>
 
-  body { font-family: sans-serif; line-height: 1.5; text-align: center; width: 45%; margin: 0 auto }
+  body { font-family: sans-serif; line-height: 1.5; text-align: center; width: 45%; margin: 0 auto; overflow-y: scroll; }
 
   article { padding: 1.5em; text-align: left; }
   article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
@@ -13,9 +13,9 @@
   
   a { text-decoration: none; font-size: 1.5em; }
 
-  label { cursor: pointer; user-select: none; }
+  label { cursor: pointer; user-select: none; font-size: 0.9em; }
   label::before { content: attr(for); }
-  input:checked + label { font-weight: bold; }
+  input:checked + label { text-shadow: 1px 0px 0px black; }
 
   input,article { display: none; }
 
@@ -31,6 +31,7 @@
       display: inherit;
     }
 
+  input:checked ~ p { display: none; } 
   @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
   @media only screen and (max-width:  992px) { body { text-align: center; } }
 
@@ -178,5 +179,7 @@
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/taylor-apl/"
         >Implementing Taylor Series in APL</a>
       <address><time>2022-01-06</time>, Kamila Szewczyk</address></article>
+
+    <p style="font-family: 'Times New Roman', Times, serif; ">What Ever Happened to the Jot∘Dot Times?</p>
 </body>
 </html>
