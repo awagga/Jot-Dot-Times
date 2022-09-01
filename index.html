@@ -12,7 +12,6 @@
 
   article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
   article::after{ content: attr(class); color: #666; }
-  article * > { display: block }
   
   a { text-decoration: none; font-size: 1.5em; }
   time::after{ content: ", "; }
@@ -23,7 +22,6 @@
   main,section,article { padding: 1.5em; }
 
   label { cursor: pointer; user-select: none; }
-  label,input { position: sticky; }
   label::before { content: attr(for); }
   label::after { content: "⬛"; }
   input:checked + label::after { content: "☑️"; }
@@ -56,123 +54,123 @@
       
     <article><a href="http://blog.vmchale.com/article/apl-different"
         >APL Is Truly Different</a>
-      <time>2022-08-26</time><address>Vanessa McHale</address></article>      
+      <address><time>2022-08-26</time>Vanessa McHale</address></article>      
     
     <article class="Python"><a href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
         >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and JSON</a>
-      <time>2022-08-24</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-08-24</time>Rodrigo Girão Serrão</address></article>
 
     <article><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
         >Knapsack II</a>
-      <time>2022-08-06</time><address>Felix Flath</address></article>
+      <address><time>2022-08-06</time>Felix Flath</address></article>
 
     <article><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
         >Knapsack</a>
-      <time>2022-08-06</time><address>Felix Flath</address></article>
+      <address><time>2022-08-06</time>Felix Flath</address></article>
     
     <article class="Notation"><a href="https://www.toolofthought.com/posts/on-control-structures"
         >On Control Structures</a>
-      <time>2022-08-01</time><address>Paul Mansour</address></article>
+      <address><time>2022-08-01</time>Paul Mansour</address></article>
 
     <article class="Notation"><a href="https://blog.dhsdevelopments.com/control-structures-in-kap"
         >Control structures in KAP</a>
-      <time>2022-07-23</time><address>Elias Mårtenson</address></article>
+      <address><time>2022-07-23</time>Elias Mårtenson</address></article>
 
     <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-601"
         >LeetCode 601: Human Traffic of Stadium</a>
-      <time>2022-07-09</time><address>Paul Mansour</address></article>
+      <address><time>2022-07-09</time>Paul Mansour</address></article>
 
     <article class="Tacit"><a href="https://www.toolofthought.com/posts/trains"
         >Trains</a>
-      <time>2022-07-08</time><address>Paul Mansour</address></article>
+      <address><time>2022-07-08</time>Paul Mansour</address></article>
 
     <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-569"
         >LeetCode 569: Median Employee Salary</a>
-      <time>2022-07-07</time><address>Paul Mansour</address></article>
+      <address><time>2022-07-07</time>Paul Mansour</address></article>
 
     <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-571"
         >LeetCode 571: Find Median Given Frequency of Numbers</a>
-      <time>2022-07-06</time><address>Paul Mansour</address></article>
+      <address><time>2022-07-06</time>Paul Mansour</address></article>
 
     <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-571"
         >LeetCode 262: Trips and Users</a>
-      <time>2022-06-26</time><address>Paul Mansour</address></article>
+      <address><time>2022-06-26</time>Paul Mansour</address></article>
     
     <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-185"
         >LeetCode 185: Department Top Three Salaries</a>
-      <time>2022-06-25</time><address>Paul Mansour</address></article>
+      <address><time>2022-06-25</time>Paul Mansour</address></article>
 
     <article><a href="https://www.toolofthought.com/posts/operators-in-a-dsl"
         >Operators in a DSL</a>
-      <time>2022-05-28</time><address>Paul Mansour</address></article>
+      <address><time>2022-05-28</time>Paul Mansour</address></article>
 
     <article><a href="https://blog.dhsdevelopments.com/commentary-on-array-cast"
         >Commentary on Array Cast</a>
-      <time>2022-05-18</time><address>Elias Mårtenson</address></article>
+      <address><time>2022-05-18</time>Elias Mårtenson</address></article>
     
     <article class="Python"><a href="https://www.dyalog.com/blog/2022/05/maintaining-pynapl-part-1-the-beginning"
         >Maintaining Py’n’APL Part 1: The Beginning</a>
-      <time>2022-05-09</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-05-09</time>Rodrigo Girão Serrão</address></article>
     
     <article><a href="https://mathspp.com/blog/solving-wordle-with-apl"
         >Solving Wordle with APL</a>
-      <time>2022-03-28</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-03-28</time>Rodrigo Girão Serrão</address></article>
 
     <article><a href="https://mathspp.com/blog/why-apl-is-a-language-worth-knowing"
         >Why APL is a language worth knowing</a>
-      <time>2022-03-24</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-03-24</time>Rodrigo Girão Serrão</address></article>
 
     <article><a href="https://blog.dhsdevelopments.com/lazy-evaluation-helping-implementation-of-transform-by-mask-in-kap"
         >Lazy evaluation helping implementation of transform by mask in KAP</a>
-      <time>2022-03-13</time><address>Elias Mårtenson</address></article>
+      <address><time>2022-03-13</time>Elias Mårtenson</address></article>
 
     <article><a href="https://blog.dhsdevelopments.com/an-example-of-lazy-evaluation-in-kap"
         >An example of lazy evaluation in KAP</a>
-      <time>2022-03-12</time><address>Elias Mårtenson</address></article>
+      <address><time>2022-03-12</time>Elias Mårtenson</address></article>
     
     <article class="Notation"><a href="https://outerproduct.net/2022-03-07_death-to-%E2%97%8B.html"
         >Fixing APL’s Trigonometric Notation</a>
-      <time>2022-03-07</time><address>Moonchild</address></article>
+      <address><time>2022-03-07</time>Moonchild</address></article>
 
     <article><a href="https://www.toolofthought.com/posts/session-configuration"
         >Session Configuration</a>
-      <time>2022-03-06</time><address>Paul Mansour</address></article>
+      <address><time>2022-03-06</time>Paul Mansour</address></article>
 
     <article><a href="https://www.toolofthought.com/posts/a-new-workspace-file-format"
         >A New Workspace File Format</a>
-      <time>2022-02-26</time><address>Paul Mansour</address></article>
+      <address><time>2022-02-26</time>Paul Mansour</address></article>
 
     <article class="ML | Mathematics"><a href="https://mathspp.com/blog/til/034"
         >TIL #034 – multi-channel transposed convolution</a>
-      <time>2022-02-23</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-02-23</time>Rodrigo Girão Serrão</address></article>
 
     <article class="ML | Mathematics"><a href="https://mathspp.com/blog/til/034"
         >TIL #033 – transposed convolution</a>
-      <time>2022-02-22</time><address>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-02-22</time>Rodrigo Girão Serrão</address></article>
     
     <article><a href="https://www.toolofthought.com/posts/aaronhsuquote"
         >Aaron Hsu at Function Conf 2022</a>
-      <time>2022-01-27</time><address>Paul Mansour</address></article>
+      <address><time>2022-01-27</time>Paul Mansour</address></article>
 
     <article><a href="https://www.toolofthought.com/posts/vfi-with-csv"
         >⎕VFI with ⎕CSV</a>
-      <time>2022-01-25</time><address>Paul Mansour</address></article>
+      <address><time>2022-01-25</time>Paul Mansour</address></article>
 
     <article class="Mathematics"><a href="https://mathspp.com/blog/counting-mosaics-with-apl"
         >TIL #021 – Spouge's formula</a>
-      <time>2022-01-10</time><address>Rodrigo Girão Serrã</address></article>
+      <address><time>2022-01-10</time>Rodrigo Girão Serrã</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/linalg-apl/"
         >Implementing the Faddeev-LeVerrier algorithm in APL</a>
-      <time>2022-01-10</time><address>Kamila Szewczyk</address></article>
+      <address><time>2022-01-10</time>Kamila Szewczyk</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/poly-root-apl"
         >Finding roots of a polynomial - numerical methods in APL</a>
-      <time>2022-01-09</time><address>Kamila Szewczyk</address></article>
+      <address><time>2022-01-09</time>Kamila Szewczyk</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/taylor-apl/"
         >Implementing Taylor Series in APL</a>
-      <time>2022-01-06</time><address>Kamila Szewczyk</address></article>
+      <address><time>2022-01-06</time>Kamila Szewczyk</address></article>
   </main>
 </body>
 </html>
