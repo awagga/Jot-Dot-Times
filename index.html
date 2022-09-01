@@ -5,172 +5,178 @@
 </head>
 <style>
 
-  * { box-sizing: border-box; }
-  *::after { white-space: pre; }
-  body { font-family: sans-serif; line-height: 1.5; text-align: center; }
-  body,html { margin: 0; padding: 0; width: 100%; height: 100%;  }
+  body { font-family: sans-serif; line-height: 1.5; text-align: center; width: 45%; margin: 0 auto }
 
+  article { padding: 1.5em; text-align: left; }
   article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
   article::after{ content: attr(class); color: #666; }
   
   a { text-decoration: none; font-size: 1.5em; }
-  time::after{ content: ", "; }
-
-  h1,h2,h3,h4,h5,h6 { margin: 0 }
-
-  main { width: 45%; margin: 0 auto; text-align: left; }
-  main,section,article { padding: 1.5em; }
 
   label { cursor: pointer; user-select: none; }
   label::before { content: attr(for); }
-  label::after { content: "⬛"; }
-  input:checked + label::after { content: "☑️"; }
+  input:checked + label { font-weight: bold; }
 
-  input,
-  article:is(.Python,.LeetCode,.Notation,.Tacit,.ML,.Mathematics) { display: none; }
+  input,article { display: none; }
 
-  #Python:checked ~ * .Python, #LeetCode:checked ~ * .LeetCode, #Notation:checked ~ * .Notation, #Tacit:checked ~ * .Tacit, #ML:checked ~ * .ML, #Mathematics:checked ~ * .Mathematics { display: inherit; }
+  #Challenge:checked    ~ .Challenge,
+  #Pointfree:checked    ~ .Pointfree,
+  #Mathematics:checked  ~ .Mathematics,
+  #Idiom:checked        ~ .Idiom,
+  #Design:checked       ~ .Design,
+  #Commentary:checked   ~ .Commentary,
+  #Announcement:checked ~ .Announcement,
+  #Example:checked      ~ .Example,
+  #Anecdote:checked     ~ .Anecdote {
+      display: inherit;
+    }
 
   @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
-  @media only screen and (max-width:  992px) { main { text-align: center; } }
+  @media only screen and (max-width:  992px) { body { text-align: center; } }
 
 </style>
 <body>
-  <input type="checkbox" id="Python"      checked=""><label for="Python"></label>
-  |
-  <input type="checkbox" id="LeetCode"    checked=""><label for="LeetCode"></label>
-  |
-  <input type="checkbox" id="Notation"    checked=""><label for="Notation"></label>
-  |
-  <input type="checkbox" id="Tacit"       checked=""><label for="Tacit"></label>
-  |
-  <input type="checkbox" id="ML"          checked=""><label for="ML"></label>
-  |
-  <input type="checkbox" id="Mathematics" checked=""><label for="Mathematics"></label>
 
-  <main>
-    <nav style="text-align: center; font-family: 'Times New Roman', Times, serif;">
-      <h1 style="font-size: 3.5em;"><span style="display:inline-block;line-height:100%;font-size: 0.35em;">THE<br><i>APL</i></span>Jot Dot Times</h1></nav>
-      
-    <article><a href="http://blog.vmchale.com/article/apl-different"
+  <nav style="text-align: center; font-family: 'Times New Roman', Times, serif;">
+    <h1 style="margin: 0; font-size: 3.5em;"><span style="display:inline-block;line-height:100%;font-size: 0.35em;">THE<br><i>APL</i></span>Jot Dot Times</h1></nav>
+
+  <input type="checkbox" id="Challenge"     checked=""><label for="Challenge"></label>
+  |
+  <input type="checkbox" id="Pointfree"     checked=""><label for="Pointfree"></label>
+  |
+  <input type="checkbox" id="Mathematics"   checked=""><label for="Mathematics"></label>
+  |
+  <input type="checkbox" id="Idiom"         checked=""><label for="Idiom"></label>
+  |
+  <input type="checkbox" id="Design"        checked=""><label for="Design"></label>
+  |
+  <input type="checkbox" id="Commentary"    checked=""><label for="Commentary"></label>
+  |
+  <input type="checkbox" id="Announcement"  checked=""><label for="Announcement"></label>
+  |
+  <input type="checkbox" id="Example"       checked=""><label for="Example"></label>
+  |
+  <input type="checkbox" id="Anecdote"      checked=""><label for="Anecdote"></label>
+
+
+    <article class="Commentary"><a href="http://blog.vmchale.com/article/apl-different"
         >APL Is Truly Different</a>
-      <address><time>2022-08-26</time>Vanessa McHale</address></article>      
+      <address><time>2022-08-26</time>, Vanessa McHale</address></article>      
     
-    <article class="Python"><a href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
+    <article class="Anecdote"><a href="https://www.dyalog.com/blog/2022/08/maintaining-pynapl-part-2-apl-arrays-python-objects-and-json"
         >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and JSON</a>
-      <address><time>2022-08-24</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-08-24</time>, Rodrigo Girão Serrão</address></article>
 
-    <article><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
+    <article class="Example | Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
         >Knapsack II</a>
-      <address><time>2022-08-06</time>Felix Flath</address></article>
+      <address><time>2022-08-06</time>, Felix Flath</address></article>
 
-    <article><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
+    <article class="Example | Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
         >Knapsack</a>
-      <address><time>2022-08-06</time>Felix Flath</address></article>
+      <address><time>2022-08-06</time>, Felix Flath</address></article>
     
-    <article class="Notation"><a href="https://www.toolofthought.com/posts/on-control-structures"
+    <article class="Design"><a href="https://www.toolofthought.com/posts/on-control-structures"
         >On Control Structures</a>
-      <address><time>2022-08-01</time>Paul Mansour</address></article>
+      <address><time>2022-08-01</time>, Paul Mansour</address></article>
 
-    <article class="Notation"><a href="https://blog.dhsdevelopments.com/control-structures-in-kap"
+    <article class="Design"><a href="https://blog.dhsdevelopments.com/control-structures-in-kap"
         >Control structures in KAP</a>
-      <address><time>2022-07-23</time>Elias Mårtenson</address></article>
+      <address><time>2022-07-23</time>, Elias Mårtenson</address></article>
 
-    <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-601"
+    <article class="Challenge"><a href="https://www.toolofthought.com/posts/leetcode-601"
         >LeetCode 601: Human Traffic of Stadium</a>
-      <address><time>2022-07-09</time>Paul Mansour</address></article>
+      <address><time>2022-07-09</time>, Paul Mansour</address></article>
 
-    <article class="Tacit"><a href="https://www.toolofthought.com/posts/trains"
+    <article class="Pointfree"><a href="https://www.toolofthought.com/posts/trains"
         >Trains</a>
-      <address><time>2022-07-08</time>Paul Mansour</address></article>
+      <address><time>2022-07-08</time>, Paul Mansour</address></article>
 
-    <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-569"
+    <article class="Challenge"><a href="https://www.toolofthought.com/posts/leetcode-569"
         >LeetCode 569: Median Employee Salary</a>
-      <address><time>2022-07-07</time>Paul Mansour</address></article>
+      <address><time>2022-07-07</time>, Paul Mansour</address></article>
 
-    <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-571"
+    <article class="Challenge"><a href="https://www.toolofthought.com/posts/leetcode-571"
         >LeetCode 571: Find Median Given Frequency of Numbers</a>
-      <address><time>2022-07-06</time>Paul Mansour</address></article>
+      <address><time>2022-07-06</time>, Paul Mansour</address></article>
 
-    <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-571"
+    <article class="Challenge"><a href="https://www.toolofthought.com/posts/leetcode-571"
         >LeetCode 262: Trips and Users</a>
-      <address><time>2022-06-26</time>Paul Mansour</address></article>
+      <address><time>2022-06-26</time>, Paul Mansour</address></article>
     
-    <article class="LeetCode"><a href="https://www.toolofthought.com/posts/leetcode-185"
+    <article class="Challenge"><a href="https://www.toolofthought.com/posts/leetcode-185"
         >LeetCode 185: Department Top Three Salaries</a>
-      <address><time>2022-06-25</time>Paul Mansour</address></article>
+      <address><time>2022-06-25</time>, Paul Mansour</address></article>
 
-    <article><a href="https://www.toolofthought.com/posts/operators-in-a-dsl"
+    <article class="Idiom"><a href="https://www.toolofthought.com/posts/operators-in-a-dsl"
         >Operators in a DSL</a>
-      <address><time>2022-05-28</time>Paul Mansour</address></article>
+      <address><time>2022-05-28</time>, Paul Mansour</address></article>
 
-    <article><a href="https://blog.dhsdevelopments.com/commentary-on-array-cast"
+    <article class="Commentary"><a href="https://blog.dhsdevelopments.com/commentary-on-array-cast"
         >Commentary on Array Cast</a>
-      <address><time>2022-05-18</time>Elias Mårtenson</address></article>
+      <address><time>2022-05-18</time>, Elias Mårtenson</address></article>
     
-    <article class="Python"><a href="https://www.dyalog.com/blog/2022/05/maintaining-pynapl-part-1-the-beginning"
+    <article class="Anecdote"><a href="https://www.dyalog.com/blog/2022/05/maintaining-pynapl-part-1-the-beginning"
         >Maintaining Py’n’APL Part 1: The Beginning</a>
-      <address><time>2022-05-09</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-05-09</time>, Rodrigo Girão Serrão</address></article>
     
-    <article><a href="https://mathspp.com/blog/solving-wordle-with-apl"
+    <article class="Challenge | Example"><a href="https://mathspp.com/blog/solving-wordle-with-apl"
         >Solving Wordle with APL</a>
-      <address><time>2022-03-28</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-03-28</time>, Rodrigo Girão Serrão</address></article>
 
-    <article><a href="https://mathspp.com/blog/why-apl-is-a-language-worth-knowing"
+    <article class="Commentary"><a href="https://mathspp.com/blog/why-apl-is-a-language-worth-knowing"
         >Why APL is a language worth knowing</a>
-      <address><time>2022-03-24</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-03-24</time>, Rodrigo Girão Serrão</address></article>
 
-    <article><a href="https://blog.dhsdevelopments.com/lazy-evaluation-helping-implementation-of-transform-by-mask-in-kap"
+    <article class="Design"><a href="https://blog.dhsdevelopments.com/lazy-evaluation-helping-implementation-of-transform-by-mask-in-kap"
         >Lazy evaluation helping implementation of transform by mask in KAP</a>
-      <address><time>2022-03-13</time>Elias Mårtenson</address></article>
+      <address><time>2022-03-13</time>, Elias Mårtenson</address></article>
 
-    <article><a href="https://blog.dhsdevelopments.com/an-example-of-lazy-evaluation-in-kap"
+    <article class="Example"><a href="https://blog.dhsdevelopments.com/an-example-of-lazy-evaluation-in-kap"
         >An example of lazy evaluation in KAP</a>
-      <address><time>2022-03-12</time>Elias Mårtenson</address></article>
+      <address><time>2022-03-12</time>, Elias Mårtenson</address></article>
     
-    <article class="Notation"><a href="https://outerproduct.net/2022-03-07_death-to-%E2%97%8B.html"
+    <article class="Design"><a href="https://outerproduct.net/2022-03-07_death-to-%E2%97%8B.html"
         >Fixing APL’s Trigonometric Notation</a>
-      <address><time>2022-03-07</time>Moonchild</address></article>
+      <address><time>2022-03-07</time>, Moonchild</address></article>
 
-    <article><a href="https://www.toolofthought.com/posts/session-configuration"
+    <article class="Design"><a href="https://www.toolofthought.com/posts/session-configuration"
         >Session Configuration</a>
-      <address><time>2022-03-06</time>Paul Mansour</address></article>
+      <address><time>2022-03-06</time>, Paul Mansour</address></article>
 
-    <article><a href="https://www.toolofthought.com/posts/a-new-workspace-file-format"
+    <article class="Design"><a href="https://www.toolofthought.com/posts/a-new-workspace-file-format"
         >A New Workspace File Format</a>
-      <address><time>2022-02-26</time>Paul Mansour</address></article>
+      <address><time>2022-02-26</time>, Paul Mansour</address></article>
 
-    <article class="ML | Mathematics"><a href="https://mathspp.com/blog/til/034"
+    <article class="Mathematics"><a href="https://mathspp.com/blog/til/034"
         >TIL #034 – multi-channel transposed convolution</a>
-      <address><time>2022-02-23</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-02-23</time>, Rodrigo Girão Serrão</address></article>
 
-    <article class="ML | Mathematics"><a href="https://mathspp.com/blog/til/034"
+    <article class="Mathematics"><a href="https://mathspp.com/blog/til/034"
         >TIL #033 – transposed convolution</a>
-      <address><time>2022-02-22</time>Rodrigo Girão Serrão</address></article>
+      <address><time>2022-02-22</time>, Rodrigo Girão Serrão</address></article>
     
-    <article><a href="https://www.toolofthought.com/posts/aaronhsuquote"
+    <article class="Commentary"><a href="https://www.toolofthought.com/posts/aaronhsuquote"
         >Aaron Hsu at Function Conf 2022</a>
-      <address><time>2022-01-27</time>Paul Mansour</address></article>
+      <address><time>2022-01-27</time>, Paul Mansour</address></article>
 
-    <article><a href="https://www.toolofthought.com/posts/vfi-with-csv"
+    <article class="Example | Idiom"><a href="https://www.toolofthought.com/posts/vfi-with-csv"
         >⎕VFI with ⎕CSV</a>
-      <address><time>2022-01-25</time>Paul Mansour</address></article>
+      <address><time>2022-01-25</time>, Paul Mansour</address></article>
 
     <article class="Mathematics"><a href="https://mathspp.com/blog/counting-mosaics-with-apl"
         >TIL #021 – Spouge's formula</a>
-      <address><time>2022-01-10</time>Rodrigo Girão Serrã</address></article>
+      <address><time>2022-01-10</time>, Rodrigo Girão Serrã</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/linalg-apl/"
         >Implementing the Faddeev-LeVerrier algorithm in APL</a>
-      <address><time>2022-01-10</time>Kamila Szewczyk</address></article>
+      <address><time>2022-01-10</time>, Kamila Szewczyk</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/poly-root-apl"
         >Finding roots of a polynomial - numerical methods in APL</a>
-      <address><time>2022-01-09</time>Kamila Szewczyk</address></article>
+      <address><time>2022-01-09</time>, Kamila Szewczyk</address></article>
 
     <article class="Mathematics"><a href="https://palaiologos.rocks/posts/taylor-apl/"
         >Implementing Taylor Series in APL</a>
-      <address><time>2022-01-06</time>Kamila Szewczyk</address></article>
-  </main>
+      <address><time>2022-01-06</time>, Kamila Szewczyk</address></article>
 </body>
 </html>
