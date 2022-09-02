@@ -24,6 +24,8 @@
     input { display: none; }
     article,input:checked ~ p { overflow: hidden; max-height: 0; padding: 0; opacity: 0;
       transition: max-height 0ms 200ms ease-out, padding 0ms 200ms ease-out, opacity 200ms 0ms; }
+
+    input:checked ~ p { visibility: hidden; }
   
     #Challenge:checked    ~ .Challenge,
     #Pointfree:checked    ~ .Pointfree,
@@ -34,11 +36,12 @@
     #Announcement:checked ~ .Announcement,
     #Example:checked      ~ .Example,
     #Anecdote:checked     ~ .Anecdote,
-    p { max-height: 100%; padding: 1.5em; opacity: 1;
+    p { max-height: 100%; opacity: 1; padding: 1.5em; 
       transition: max-height 0ms 0ms ease-in, padding 0ms 0ms ease-in, opacity 200ms 200ms; }
-  
+
     @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
     @media only screen and (max-width:  992px) { body { text-align: center; } }
+
   
   </style>
 </head>
