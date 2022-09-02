@@ -9,7 +9,7 @@
 
     body { line-height: 1.5; text-align: center; width: 45%; margin: 0 auto; overflow-y: scroll; }
   
-    article { padding: 1.5em; text-align: left; }
+    article { text-align: left; }
     article:not(:last-child) { border-bottom: 1px solid #bcbcbc; }
     article::after{ content: attr(class); color: #666;}
     
@@ -21,7 +21,9 @@
     label::before { content: attr(for); }
     input:checked + label { border-color: #a7d9b6; }
   
-    input,article { display: none; }
+    input { display: none; }
+    article,input:checked ~ p { overflow: hidden; max-height: 0; padding: 0; opacity: 0;
+      transition: max-height 0ms 200ms ease-out, padding 0ms 200ms ease-out, opacity 200ms 0ms; }
   
     #Challenge:checked    ~ .Challenge,
     #Pointfree:checked    ~ .Pointfree,
@@ -31,11 +33,10 @@
     #Commentary:checked   ~ .Commentary,
     #Announcement:checked ~ .Announcement,
     #Example:checked      ~ .Example,
-    #Anecdote:checked     ~ .Anecdote {
-        display: inherit;
-      }
+    #Anecdote:checked     ~ .Anecdote,
+    p { max-height: 100%; padding: 1.5em; opacity: 1;
+      transition: max-height 0ms 0ms ease-in, padding 0ms 0ms ease-in, opacity 200ms 200ms; }
   
-    input:checked ~ p { display: none; } 
     @media only screen and (max-width: 1200px) { body { font-size: 75%; } }
     @media only screen and (max-width:  992px) { body { text-align: center; } }
   
@@ -43,18 +44,18 @@
 </head>
 <body>
 
-  <nav style="text-align: center; font-family: 'Times New Roman', Times, serif;">
-    <h1 style="margin: 0; font-size: 3.5em;"><span style="display:inline-block;line-height:100%;font-size: 0.4em;padding:0.1em">The<br><i>APL</i></span>Jo̊t Dȯt Ti̽mes</h1></nav>
+  <nav style="text-align: center;font-family: 'Times New Roman', Times, serif;">
+    <h1 style="margin: 0;font-size: 3.5em;"><span style="display:inline-block;line-height:100%;font-size: 0.4em;padding:0.1em">The<br><i>APL</i></span>Jo̊t Dȯt Ti̽mes</h1></nav>
 
-  <input type="checkbox" id="Challenge"     checked=""><label for="Challenge"></label>
-  <input type="checkbox" id="Pointfree"     checked=""><label for="Pointfree"></label>
-  <input type="checkbox" id="Mathematics"   checked=""><label for="Mathematics"></label>
-  <input type="checkbox" id="Idiom"         checked=""><label for="Idiom"></label>
-  <input type="checkbox" id="Design"        checked=""><label for="Design"></label>
-  <input type="checkbox" id="Commentary"    checked=""><label for="Commentary"></label>
-  <input type="checkbox" id="Announcement"  checked=""><label for="Announcement"></label>
-  <input type="checkbox" id="Example"       checked=""><label for="Example"></label>
-  <input type="checkbox" id="Anecdote"      checked=""><label for="Anecdote"></label>
+  <input type="checkbox" id="Challenge"    checked=""><label for="Challenge"></label>
+  <input type="checkbox" id="Pointfree"    checked=""><label for="Pointfree"></label>
+  <input type="checkbox" id="Mathematics"  checked=""><label for="Mathematics"></label>
+  <input type="checkbox" id="Idiom"        checked=""><label for="Idiom"></label>
+  <input type="checkbox" id="Design"       checked=""><label for="Design"></label>
+  <input type="checkbox" id="Commentary"   checked=""><label for="Commentary"></label>
+  <input type="checkbox" id="Announcement" checked=""><label for="Announcement"></label>
+  <input type="checkbox" id="Example"      checked=""><label for="Example"></label>
+  <input type="checkbox" id="Anecdote"     checked=""><label for="Anecdote"></label>
 
 
     <article class="Commentary"><a href="http://blog.vmchale.com/article/apl-different"
@@ -65,11 +66,11 @@
         >Maintaining Py’n’APL Part 2: APL Arrays, Python Objects, and JSON</a>
       <address><time>2022-08-24</time>, Rodrigo Girão Serrão</address></article>
 
-    <article class="Example Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
+    <article class="Example ; Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack2.html"
         >Knapsack II</a>
       <address><time>2022-08-06</time>, Felix Flath</address></article>
 
-    <article class="Example Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
+    <article class="Example ; Challenge"><a href="https://isaac-flath.github.io/APL-Exploration/posts/knapsack.html"
         >Knapsack</a>
       <address><time>2022-08-06</time>, Felix Flath</address></article>
     
@@ -117,7 +118,7 @@
         >Maintaining Py’n’APL Part 1: The Beginning</a>
       <address><time>2022-05-09</time>, Rodrigo Girão Serrão</address></article>
     
-    <article class="Example Challenge"><a href="https://mathspp.com/blog/solving-wordle-with-apl"
+    <article class="Example ; Challenge"><a href="https://mathspp.com/blog/solving-wordle-with-apl"
         >Solving Wordle with APL</a>
       <address><time>2022-03-28</time>, Rodrigo Girão Serrão</address></article>
 
@@ -157,7 +158,7 @@
         >Aaron Hsu at Function Conf 2022</a>
       <address><time>2022-01-27</time>, Paul Mansour</address></article>
 
-    <article class="Example Idiom"><a href="https://www.toolofthought.com/posts/vfi-with-csv"
+    <article class="Example ; Idiom"><a href="https://www.toolofthought.com/posts/vfi-with-csv"
         >⎕VFI with ⎕CSV</a>
       <address><time>2022-01-25</time>, Paul Mansour</address></article>
 
